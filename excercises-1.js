@@ -30,9 +30,9 @@
 // Q1
 // Write a function called `sum` that takes two
 // parameters and returns the sum of those 2 numbers.
-function sum(a, b{
+function sum(a, b) {
     return a + b
-})
+}
 
 console.assert(sum(2,4) === 6)
 console.assert(sum(45, 23) === 68)
@@ -42,9 +42,19 @@ console.assert(sum(-2, -57) === -59)
 // Write a function named `avg` that takes 3 parameters
 // and returns the average of those 3 numbers.
 
-function avg(a + b + C) {
-    console.log((a + b + C) / 3);
-    return (a + b + C) / 3;
+// PEDAC
+// EXAMPLE: 5 + 10 + 6: 7
+// Data Structure: numbers
+// Algorithm: take the three numbers and divide them by three
+// code...
+
+
+function avg(a, b, c) {
+    var total = a + b + c
+    return total / 3
+    
+    // console.log((a + b + C) / 3);
+    // return (a + b + C) / 3;
 }
 
 console.assert(avg(2,3,4) === 3)
@@ -56,7 +66,6 @@ console.assert(avg(123,234,345) === 234)
 // parameter (a string) and returns the length
 
 function getLength(str){
-    console.log(str.length);
     return str.length;
 }
 
@@ -70,7 +79,9 @@ console.assert(getLength('supercalifragilisticexpialidocious') === 34)
 // parameter is greater than the second. Otherwise
 // the function should return `false`.
 
-
+function greaterthan(a, b) {
+   return a > b
+}
 
 console.assert(greaterThan(2, 1) === true)
 console.assert(greaterThan(23, 23) === false)
@@ -85,11 +96,12 @@ console.assert(greaterThan(-234, 1) === false)
 let str = "Hello, "
 let name = "Michael"
 
-function greet(str1, str2){
-  return str1 + str2
+function greet(name){
+  var greeting = 'Hello, ' + name + "!"
+    return greeting
 }
 
-greet(str, )
+
 
 console.assert(greet("Michael") === "Hello, Michael!")
 console.assert(greet("R2D2") === "Hello, R2D2!")
@@ -107,20 +119,10 @@ console.assert(greet("Iron Man") === "Hello, Iron Man!")
 // sentence: "quick brown fox jumps over the fence"
 
 function madlib(str1, str2, str3, str4) {
-    console.log("The quick brown fox jumps over the fence.");
-    let sentence = "The " + str1 + "brown" + str2 + " " + str3 + "over the " + str4 + ".";
-    console.log(sentence);
-    return sentence;
+    
+    var sentence = `The  ${str1} brown ${str2} ${str3} over the ${str4} .`
+    return sentence
 }
-
-console.assert(
-madlib
-
-);
-console.assert(
-madlib
-
-    );
 
 
 console.assert(madlib("quick","fox","jumps","fence")=== "The quick brown fox jumps over the fence.")
